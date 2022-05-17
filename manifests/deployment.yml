@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "myakscluster-a6d5"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "myakscluster-a6d5"
+  template:
+    metadata:
+      labels:
+        app: "myakscluster-a6d5"
+    spec:
+      containers:
+        - name: "myakscluster-a6d5"
+          image: "vaueds.azurecr.io/myakscluster"
+          ports:
+          - containerPort: 3040
