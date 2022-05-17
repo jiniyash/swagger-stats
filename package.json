@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run copy:ux",
     "copy:ux": "ncp node_modules/swagger-stats-ux/dist ux",
-    "start": "node example/app.js",
+    "start": "node examples/testapp/testapp.js",
     "hapitestapp": "cross-env SWS_AUTHTEST_MAXAGE=2 nyc --reporter=lcov --reporter=html --reporter=json --reporter=text --report-dir=coverage/hapitestapp node examples/hapijstest/hapijstest.js",
     "fastifytestapp": "cross-env SWS_AUTHTEST_MAXAGE=2 nyc --reporter=lcov --reporter=html --reporter=json --reporter=text --report-dir=coverage/fastifytestapp node examples/fastify/fasifytest.js",
     "restifytestapp": "cross-env SWS_AUTHTEST_MAXAGE=2 nyc --reporter=lcov --reporter=html --reporter=json --reporter=text --report-dir=coverage/restifytestapp node examples/restify/restifytest.js",
@@ -103,6 +103,7 @@
     "qs": "^6.10.1",
     "request": "^2.88.2",
     "send": "^0.17.1",
+    "swagger-stats": "^0.99.2",
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
