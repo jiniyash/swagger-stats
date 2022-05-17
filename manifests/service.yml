@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "myakscluster-a6d5"
+    labels:
+        app: "myakscluster-a6d5"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 3040
+      targetPort: 3040
+      protocol: TCP
+      name: http
+    selector:
+        app: "myakscluster-a6d5"
